@@ -4,17 +4,17 @@ import { useStore } from '../../stateManagements/zustand'
 import styles from './styles.module.css'
 
 type Props = {
-  type: 'less' | 'plus',  
+  type: 'less' | 'plus',
 }
 
-export default function PlusLessButton({ type }:Props) {
+export default function PlusLessButton({ type }: Props): JSX.Element {
 
-  const symbol = type === 'plus' ? '+': '-'
+  const symbol = type === 'plus' ? '+' : '-';
   const sumCount = useStore(state => state.sumCount)
   const lessCount = useStore(state => state.lesCount)
 
   const handleClick = () => {
-    if(type === 'plus') sumCount()
+    if (type === "plus") sumCount()
     else lessCount()
   }
 

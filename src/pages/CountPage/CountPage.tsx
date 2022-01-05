@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 export default function CountPage() {
 
   useEffect(() => {
-    console.log('Print');
+    console.log('Print')
   })
 
   return (
